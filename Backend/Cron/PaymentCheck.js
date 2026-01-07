@@ -9,7 +9,7 @@ const { checkPaymentStatus } = require('../Controllers/AdminController');
 
 
 function startPaymentCheck() {
-    cron.schedule("*/1 * * * *", async () => {
+    cron.schedule("*/15 * * * *", async () => {
         console.log("Running payment status check...");
         await checkPaymentStatus();
     });
